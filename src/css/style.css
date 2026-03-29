@@ -21,8 +21,8 @@
 
 :root {
     --color-ink: #2C2416;
-    --color-ink-light: #5A4D3A;
-    --color-ink-faint: #8A7D6A;
+    --color-ink-light: #4A3D2B;
+    --color-ink-faint: #6B5D49;
     --color-paper: #F0E6D8;
     --color-paper-dark: #E0D8C8;
     --color-accent: #7A6B4F;
@@ -239,8 +239,8 @@ body {
 .sketch-divider {
     max-width: 900px;
     height: 20px;
-    margin: 0 auto;
-    opacity: 0.2;
+    margin: 20px auto;
+    opacity: 0.35;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='20' viewBox='0 0 800 20'%3E%3Cpath d='M0 10 Q50 2 100 10 Q150 18 200 10 Q250 3 300 10 Q350 17 400 10 Q450 4 500 10 Q550 16 600 10 Q650 5 700 10 Q750 15 800 10' stroke='%236B8F5E' stroke-width='0.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
@@ -285,6 +285,35 @@ body {
     text-align: left;
     margin-left: 0;
     margin-right: 0;
+}
+
+/* ===== HERO INTRO ===== */
+.hero-intro {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.hero-intro .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+}
+
+.hero-intro .section-text {
+    font-size: 1.1rem;
+    max-width: 620px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.hero-buttons .btn {
+    margin-top: 0;
 }
 
 /* ===== HERO SECTIE ===== */
@@ -1164,9 +1193,26 @@ details[open].news-card summary::after {
     }
 
     .grid-2,
-    .grid-3,
     .grid-4 {
         grid-template-columns: 1fr;
+    }
+
+    .gallery.grid-3 {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 12px;
+        padding-bottom: 8px;
+    }
+
+    .gallery.grid-3 .gallery-item {
+        flex: 0 0 80vw;
+        scroll-snap-align: start;
+    }
+
+    .hero-intro .section-title {
+        font-size: 2rem;
     }
 
     .news-grid {

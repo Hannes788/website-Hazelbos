@@ -32,6 +32,12 @@ module.exports = function(eleventyConfig) {
         return months[d.getMonth()];
     });
 
+    // Head filter (first N items)
+    eleventyConfig.addFilter("head", function(array, n) {
+        if (!Array.isArray(array)) return array;
+        return array.slice(0, n);
+    });
+
     eleventyConfig.addFilter("day", function(date) {
         return new Date(date).getDate();
     });
