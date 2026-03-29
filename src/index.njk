@@ -46,8 +46,8 @@ structuredData: >
 <!-- ==================== INTRO ==================== -->
 <section class="section hero-intro" id="top">
     <div class="fade-in">
-        <h1 class="section-title">'t Hazelbos</h1>
-        <p class="section-text">Anderhalve hectare voedselbos in de Achterhoek. Verblijf in natuurhuisje Acasia, huur de groepsruimte of kom het voedselbos ontdekken.</p>
+        <h1 class="section-title">{{ homepage.intro.titel }}</h1>
+        <p class="section-text">{{ homepage.intro.tekst }}</p>
     </div>
 </section>
 
@@ -56,9 +56,9 @@ structuredData: >
     <div class="fade-in">
         <div class="hero-split">
             <div class="hero-split-text">
-                <span class="section-label">natuurhuisje</span>
-                <h2 class="section-title">Natuurhuisje Acasia</h2>
-                <p class="section-text">Ons biobased natuurhuisje, midden in het voedselbos. Omringd door groen en met veel privacy. Met zorg ingericht en alles wat je nodig hebt voor een ontspannen verblijf in de natuur.</p>
+                <span class="section-label">{{ homepage.natuurhuisje.label }}</span>
+                <h2 class="section-title">{{ homepage.natuurhuisje.titel }}</h2>
+                <p class="section-text">{{ homepage.natuurhuisje.tekst }}</p>
             </div>
             <div class="hero-split-image">
                 <img src="/images/schetsen/schets%20huisje%20vervloeid.png" alt="Potloodschets van het natuurhuisje">
@@ -67,44 +67,22 @@ structuredData: >
 
         <!-- Hoofdfoto -->
         <div class="acasia-hero-photo" style="margin-top: 50px;">
-            <img loading="lazy" src="/images/fotos/acasia/huisje-3.jpg" alt="Natuurhuisje Acasia midden in het voedselbos">
+            <img loading="lazy" src="{{ homepage.natuurhuisje.hoofdfoto }}" alt="{{ homepage.natuurhuisje.hoofdfoto_alt }}">
         </div>
 
         <!-- Fotogalerij -->
         <div class="grid-3 gallery" style="margin-top: 24px;">
+            {% for foto in homepage.natuurhuisje.fotos %}
             <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/woonkamer-glaswand.jpg" alt="Woonkamer met grote glaswand en uitzicht op het bos">
+                <img loading="lazy" src="{{ foto.src }}" alt="{{ foto.alt }}">
             </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/woonkamer-overzicht.jpg" alt="Eethoek en woonkamer">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/keuken.jpg" alt="Volledig uitgeruste keuken">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/uitzicht-bos.jpg" alt="Uitzicht vanuit het huisje op het bos">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/slaapkamer-tweepersoons.jpg" alt="Slaapkamer met tweepersoons bed">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/slaapkamer-bedden.jpg" alt="Slaapkamer met losse bedden">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/badkamer-wastafel.jpg" alt="Badkamer met koperen kraan">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/regendouche.jpg" alt="Regendouche">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/spiegeltje.jpg" alt="Handgemaakt houten spiegeltje">
-            </div>
+            {% endfor %}
         </div>
 
         <ul class="feature-list" style="margin-top: 40px;">
-            <li><strong>Capaciteit:</strong> max. 5 personen</li>
-            <li><strong>Faciliteiten:</strong> keuken, badkamer, terras met uitzicht op het voedselbos</li>
-            <li><strong>Ligging:</strong> midden in het voedselbos, veel privacy</li>
+            {% for kenmerk in homepage.natuurhuisje.kenmerken %}
+            <li>{{ kenmerk }}</li>
+            {% endfor %}
         </ul>
 
         <!-- Boekingsmodule (tijdelijk uitgeschakeld) -->
@@ -124,9 +102,9 @@ structuredData: >
 <section class="section hero-section" id="voedselbos">
     <div class="fade-in hero-split">
         <div class="hero-split-text">
-            <span class="section-label">voedselbos</span>
-            <h2 class="section-title">Ons levende voedselbos</h2>
-            <p class="section-text">Een divers ecosysteem waar fruitbomen, bessenstruiken, kruiden en groenten samen groeien. Een plek waar natuur en voedselproductie hand in hand gaan.</p>
+            <span class="section-label">{{ homepage.voedselbos.label }}</span>
+            <h2 class="section-title">{{ homepage.voedselbos.titel }}</h2>
+            <p class="section-text">{{ homepage.voedselbos.tekst }}</p>
         </div>
         <div class="hero-split-image">
             <img src="/images/schetsen/schets%20vervloeid%20perzik.png" alt="Potloodschets van een perzik aan de boom">
@@ -134,33 +112,11 @@ structuredData: >
     </div>
 
     <div class="grid-3 gallery">
+        {% for foto in homepage.voedselbos.fotos %}
         <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/avondlicht-bomen.jpg" alt="Avondlicht door de bomen in het voedselbos">
+            <img loading="lazy" src="{{ foto.src }}" alt="{{ foto.alt }}">
         </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/vuurcirkel-ochtend.jpg" alt="Vuurcirkel bij zonsopkomst">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/kas.jpg" alt="Kas in het voedselbos">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/tomaten-kas.jpg" alt="Tomaten rijpen in de kas">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/bessen.jpg" alt="Bessen aan de struik">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/kornoelje.jpg" alt="Kornoelje in bloei">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/bloem-zonsondergang.jpg" alt="Bloem bij zonsondergang">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/bij-verbena.jpg" alt="Bij op verbena">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/voedselbos/ochtendmist.jpg" alt="Ochtendmist in het voedselbos">
-        </div>
+        {% endfor %}
     </div>
 
     <a href="/voedselbos/" class="btn" style="margin-top: 30px;">Meer over het voedselbos</a>
@@ -175,22 +131,18 @@ structuredData: >
             <img src="/images/schetsen/groepsruimte%20schets.png" alt="Potloodschets van de groepsruimte">
         </div>
         <div class="hero-split-text">
-            <span class="section-label">groepsruimte</span>
-            <h2 class="section-title">Vergaderen en samenkomen</h2>
-            <p class="section-text">Een rustige ruimte van 60m² voor vergaderingen, brainstormsessies, workshops, cursussen en lezingen. Flexibel in te delen, geschikt voor maximaal 30 personen. Neem tijdens een pauze de tijd om het voedselbos te verkennen.</p>
+            <span class="section-label">{{ homepage.groepsruimte.label }}</span>
+            <h2 class="section-title">{{ homepage.groepsruimte.titel }}</h2>
+            <p class="section-text">{{ homepage.groepsruimte.tekst }}</p>
         </div>
     </div>
 
     <div class="grid-3 gallery" style="margin-top: 30px;">
+        {% for foto in homepage.groepsruimte.fotos %}
         <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/groepsruimte/totaaloverzicht.jpg" alt="Totaaloverzicht van de ruimte">
+            <img loading="lazy" src="{{ foto.src }}" alt="{{ foto.alt }}">
         </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/groepsruimte/cirkelkleed-zithoek.jpg" alt="Cirkelkleed met zithoek en houtkachel">
-        </div>
-        <div class="gallery-item">
-            <img loading="lazy" src="/images/fotos/groepsruimte/keuken-uitzicht.jpg" alt="Keuken met uitzicht op het groen">
-        </div>
+        {% endfor %}
     </div>
 
     <a href="/groepsruimte/" class="btn btn-filled" style="margin-top: 30px;">Boekingsinformatie</a>
@@ -253,8 +205,8 @@ structuredData: >
 <!-- ==================== QUOTE ==================== -->
 <section class="quote-section">
     <div class="fade-in">
-        <p class="quote-text">"Wij geloven dat de verbinding met de natuur ons helpt om beter voor onszelf en voor de wereld te zorgen."</p>
-        <p class="quote-author">-- 't Hazelbos</p>
+        <p class="quote-text">"{{ homepage.quote.tekst }}"</p>
+        <p class="quote-author">-- {{ homepage.quote.auteur }}</p>
     </div>
 </section>
 

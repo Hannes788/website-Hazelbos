@@ -1,0 +1,46 @@
+{
+    "hero": {
+        "label": "groepsruimte",
+        "titel": "Vergaderen en samenkomen",
+        "tekst": "Een rustige vergader- en workshopruimte van 60m\u00b2, midden in het voedselbos van 't Hazelbos. Geschikt voor vergaderingen, brainstormsessies, workshops, cursussen en lezingen. Met flexibele indelingen en alle benodigde faciliteiten voor groepen tot 30 personen.",
+        "fotos": [
+            { "src": "/images/fotos/groepsruimte/totaaloverzicht.jpg", "alt": "Totaaloverzicht van de ruimte" },
+            { "src": "/images/fotos/groepsruimte/overzicht-breed.jpg", "alt": "Ruimte met dakbalken en lichtkoepels" },
+            { "src": "/images/fotos/groepsruimte/eettafel-ruimte.jpg", "alt": "Eettafel met zicht op de ruimte" }
+        ]
+    },
+    "ruimte": {
+        "label": "de ruimte",
+        "titel": "Ruimte voor idee\u00ebn",
+        "tekst": "De groepsruimte is een lichte, open zaal van ongeveer 60m\u00b2 met hoge dakbalken en lichtkoepels. Flexibel in te delen: van vergaderopstelling tot kringopstelling, van workshop tot lezing. De ruimte beschikt over een keuken, douche en toilet. Koffie en thee zijn inbegrepen.",
+        "tekst2": "Neem tijdens een pauze de tijd om het voedselbos te verkennen. De buitenruimte en de vuurcirkel zijn op aanvraag beschikbaar voor groepsactiviteiten.",
+        "fotos": [
+            { "src": "/images/fotos/groepsruimte/cirkelkleed-zithoek.jpg", "alt": "Cirkelkleed met zithoek en houtkachel" },
+            { "src": "/images/fotos/groepsruimte/zithoek-kachel.jpg", "alt": "Sfeervolle zithoek bij de kachel" },
+            { "src": "/images/fotos/groepsruimte/keuken-uitzicht.jpg", "alt": "Keuken met uitzicht op het groen" }
+        ]
+    },
+    "voorzieningen": [
+        { "titel": "Ruimte", "tekst": "60m\u00b2, flexibel in te delen, geschikt voor maximaal 30 personen" },
+        { "titel": "Keuken", "tekst": "Volledig uitgeruste keuken. Koffie en thee inbegrepen" },
+        { "titel": "Sanitair", "tekst": "Douche en toilet aanwezig" },
+        { "titel": "Parkeren", "tekst": "Parkeerplaatsen beschikbaar op het terrein" },
+        { "titel": "Buitenruimte", "tekst": "Voedselbos en vuurcirkel beschikbaar op aanvraag" },
+        { "titel": "Omgeving", "tekst": "Midden in het groen, in het buitengebied van Zelhem" }
+    ],
+    "sfeer": {
+        "label": "sfeer",
+        "titel": "Een plek die inspireert",
+        "tekst": "De groepsruimte ligt op het erf van 't Hazelbos, verscholen achter de bomen. Geen verkeer, geen kantoorgeluiden, wel vogelzang en de geur van het bos. Dat maakt het verschil. Deelnemers komen tot rust, idee\u00ebn krijgen ruimte, gesprekken gaan dieper. We kijken uit naar jouw suggesties en invullingen.",
+        "fotos": [
+            { "src": "/images/fotos/groepsruimte/buitenaanzicht.jpg", "alt": "Buitenaanzicht groepsruimte" },
+            { "src": "/images/fotos/groepsruimte/ruimte-vanuit-keuken.jpg", "alt": "Ruimte gezien vanuit de keuken" },
+            { "src": "/images/fotos/voedselbos/vuurcirkel-ochtend.jpg", "alt": "Vuurcirkel bij zonsopkomst" }
+        ]
+    },
+    "contact": {
+        "label": "contact",
+        "titel": "Interesse? Neem contact op",
+        "tekst": "Wil je de groepsruimte huren of eerst even komen kijken? Neem gerust contact met ons op. We denken graag mee over de mogelijkheden."
+    }
+}

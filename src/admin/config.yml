@@ -30,6 +30,245 @@ collections:
       - { label: "Samenvatting", name: "summary", widget: "text" }
       - { label: "Inhoud", name: "body", widget: "markdown", required: false }
 
+  - name: "paginas"
+    label: "Pagina-inhoud"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "src/_data/homepage.json"
+        fields:
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+          - label: "Natuurhuisje sectie"
+            name: "natuurhuisje"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Hoofdfoto", name: "hoofdfoto", widget: "image" }
+              - { label: "Hoofdfoto alt-tekst", name: "hoofdfoto_alt", widget: "string" }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+              - label: "Kenmerken"
+                name: "kenmerken"
+                widget: "list"
+                field: { label: "Kenmerk", name: "kenmerk", widget: "string" }
+          - label: "Voedselbos sectie"
+            name: "voedselbos"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "Groepsruimte sectie"
+            name: "groepsruimte"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "Quote"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Auteur", name: "auteur", widget: "string" }
+
+      - label: "Natuurhuisje Acasia"
+        name: "pagina_natuurhuisje"
+        file: "src/_data/pagina_natuurhuisje.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Hoofdfoto", name: "hoofdfoto", widget: "image" }
+              - { label: "Hoofdfoto alt-tekst", name: "hoofdfoto_alt", widget: "string" }
+          - label: "Het huisje"
+            name: "huisje"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Tekst (vervolg)", name: "tekst2", widget: "text", required: false }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "Omgeving"
+            name: "omgeving"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Tekst (vervolg)", name: "tekst2", widget: "text", required: false }
+              - { label: "Tekst (vervolg 2)", name: "tekst3", widget: "text", required: false }
+          - label: "Veelgestelde vragen"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Vraag", name: "vraag", widget: "string" }
+              - { label: "Antwoord", name: "antwoord", widget: "text" }
+
+      - label: "Voedselbos"
+        name: "pagina_voedselbos"
+        file: "src/_data/pagina_voedselbos.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "Werkwijze"
+            name: "werkwijze"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+              - label: "Statistieken"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Nummer", name: "nummer", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+          - label: "Het land"
+            name: "land"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Tekst (vervolg)", name: "tekst2", widget: "text", required: false }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "Verbond"
+            name: "verbond"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Tekst (vervolg)", name: "tekst2", widget: "text", required: false }
+          - label: "Een plek"
+            name: "plek"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
+      - label: "Groepsruimte"
+        name: "pagina_groepsruimte"
+        file: "src/_data/pagina_groepsruimte.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "De ruimte"
+            name: "ruimte"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Tekst (vervolg)", name: "tekst2", widget: "text", required: false }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "Voorzieningen"
+            name: "voorzieningen"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+          - label: "Sfeer"
+            name: "sfeer"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - label: "Foto's"
+                name: "fotos"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "src", widget: "image" }
+                  - { label: "Alt-tekst", name: "alt", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+
   - name: "instellingen"
     label: "Instellingen"
     files:

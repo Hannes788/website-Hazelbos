@@ -1,0 +1,59 @@
+{
+    "intro": {
+        "titel": "'t Hazelbos",
+        "tekst": "Anderhalve hectare voedselbos in de Achterhoek. Verblijf in natuurhuisje Acasia, huur de groepsruimte of kom het voedselbos ontdekken."
+    },
+    "natuurhuisje": {
+        "label": "natuurhuisje",
+        "titel": "Natuurhuisje Acasia",
+        "tekst": "Ons biobased natuurhuisje, midden in het voedselbos. Omringd door groen en met veel privacy. Met zorg ingericht en alles wat je nodig hebt voor een ontspannen verblijf in de natuur.",
+        "hoofdfoto": "/images/fotos/acasia/huisje-3.jpg",
+        "hoofdfoto_alt": "Natuurhuisje Acasia midden in het voedselbos",
+        "fotos": [
+            { "src": "/images/fotos/acasia/woonkamer-glaswand.jpg", "alt": "Woonkamer met grote glaswand en uitzicht op het bos" },
+            { "src": "/images/fotos/acasia/woonkamer-overzicht.jpg", "alt": "Eethoek en woonkamer" },
+            { "src": "/images/fotos/acasia/keuken.jpg", "alt": "Volledig uitgeruste keuken" },
+            { "src": "/images/fotos/acasia/uitzicht-bos.jpg", "alt": "Uitzicht vanuit het huisje op het bos" },
+            { "src": "/images/fotos/acasia/slaapkamer-tweepersoons.jpg", "alt": "Slaapkamer met tweepersoons bed" },
+            { "src": "/images/fotos/acasia/slaapkamer-bedden.jpg", "alt": "Slaapkamer met losse bedden" },
+            { "src": "/images/fotos/acasia/badkamer-wastafel.jpg", "alt": "Badkamer met koperen kraan" },
+            { "src": "/images/fotos/acasia/regendouche.jpg", "alt": "Regendouche" },
+            { "src": "/images/fotos/acasia/spiegeltje.jpg", "alt": "Handgemaakt houten spiegeltje" }
+        ],
+        "kenmerken": [
+            "Capaciteit: max. 5 personen",
+            "Faciliteiten: keuken, badkamer, terras met uitzicht op het voedselbos",
+            "Ligging: midden in het voedselbos, veel privacy"
+        ]
+    },
+    "voedselbos": {
+        "label": "voedselbos",
+        "titel": "Ons levende voedselbos",
+        "tekst": "Een divers ecosysteem waar fruitbomen, bessenstruiken, kruiden en groenten samen groeien. Een plek waar natuur en voedselproductie hand in hand gaan.",
+        "fotos": [
+            { "src": "/images/fotos/voedselbos/avondlicht-bomen.jpg", "alt": "Avondlicht door de bomen in het voedselbos" },
+            { "src": "/images/fotos/voedselbos/vuurcirkel-ochtend.jpg", "alt": "Vuurcirkel bij zonsopkomst" },
+            { "src": "/images/fotos/voedselbos/kas.jpg", "alt": "Kas in het voedselbos" },
+            { "src": "/images/fotos/voedselbos/tomaten-kas.jpg", "alt": "Tomaten rijpen in de kas" },
+            { "src": "/images/fotos/voedselbos/bessen.jpg", "alt": "Bessen aan de struik" },
+            { "src": "/images/fotos/voedselbos/kornoelje.jpg", "alt": "Kornoelje in bloei" },
+            { "src": "/images/fotos/voedselbos/bloem-zonsondergang.jpg", "alt": "Bloem bij zonsondergang" },
+            { "src": "/images/fotos/voedselbos/bij-verbena.jpg", "alt": "Bij op verbena" },
+            { "src": "/images/fotos/voedselbos/ochtendmist.jpg", "alt": "Ochtendmist in het voedselbos" }
+        ]
+    },
+    "groepsruimte": {
+        "label": "groepsruimte",
+        "titel": "Vergaderen en samenkomen",
+        "tekst": "Een rustige ruimte van 60m\u00b2 voor vergaderingen, brainstormsessies, workshops, cursussen en lezingen. Flexibel in te delen, geschikt voor maximaal 30 personen. Neem tijdens een pauze de tijd om het voedselbos te verkennen.",
+        "fotos": [
+            { "src": "/images/fotos/groepsruimte/totaaloverzicht.jpg", "alt": "Totaaloverzicht van de ruimte" },
+            { "src": "/images/fotos/groepsruimte/cirkelkleed-zithoek.jpg", "alt": "Cirkelkleed met zithoek en houtkachel" },
+            { "src": "/images/fotos/groepsruimte/keuken-uitzicht.jpg", "alt": "Keuken met uitzicht op het groen" }
+        ]
+    },
+    "quote": {
+        "tekst": "Wij geloven dat de verbinding met de natuur ons helpt om beter voor onszelf en voor de wereld te zorgen.",
+        "auteur": "'t Hazelbos"
+    }
+}

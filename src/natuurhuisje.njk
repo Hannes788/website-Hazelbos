@@ -68,9 +68,9 @@ permalink: /natuurhuisje/
     <div class="fade-in">
         <div class="hero-split">
             <div class="hero-split-text">
-                <span class="section-label">verblijf</span>
-                <h1 class="section-title">Acasia</h1>
-                <p class="section-text">Welkom in Acasia, ons biobased vakantiehuis midden in het voedselbos van 't Hazelbos in Zelhem. Dit huis is gebouwd volgens het passiefhuis-principe: een luchtdichte, dampopen constructie met leemstuc wanden en gerecyclede bouwmaterialen. Het resultaat? Een heerlijk binnenklimaat in elk seizoen, zonder concessies aan comfort of duurzaamheid.</p>
+                <span class="section-label">{{ pagina_natuurhuisje.hero.label }}</span>
+                <h1 class="section-title">{{ pagina_natuurhuisje.hero.titel }}</h1>
+                <p class="section-text">{{ pagina_natuurhuisje.hero.tekst }}</p>
             </div>
             <div class="hero-split-image">
                 <img src="/images/schetsen/schets%20huisje%20vervloeid.png" alt="Potloodschets van natuurhuisje Acasia">
@@ -79,7 +79,7 @@ permalink: /natuurhuisje/
 
         <!-- Hoofdfoto -->
         <div class="acasia-hero-photo" style="margin-top: 50px;">
-            <img loading="lazy" src="/images/fotos/acasia/huisje-3.jpg" alt="Acasia — biobased natuurhuisje midden in het voedselbos van 't Hazelbos in Zelhem">
+            <img loading="lazy" src="{{ pagina_natuurhuisje.hero.hoofdfoto }}" alt="{{ pagina_natuurhuisje.hero.hoofdfoto_alt }}">
         </div>
 
         <div style="margin-top: 40px; text-align: center;">
@@ -93,40 +93,20 @@ permalink: /natuurhuisje/
 <!-- ==================== HET HUISJE ==================== -->
 <section class="section">
     <div class="fade-in">
-        <span class="section-label">het huisje</span>
-        <h2 class="section-title">Duurzaam én comfortabel</h2>
-        <p class="section-text">Acasia heeft twee slaapkamers, een volledig uitgeruste keuken met vaatwasser en Nespresso-apparaat, en een badkamer met regendouche en warmteterugwinning. De vloerverwarming wordt aangedreven door een warmtepomp. Een wasmachine is aanwezig voor langere verblijven. Vanuit de woonkamer loop je via de tuindeuren naar je eigen terras, met uitzicht over het voedselbos.</p>
-        <p class="section-text" style="margin-top: 16px;">Hier hoef je niet te kiezen tussen duurzaam en comfortabel. Acasia biedt beide. Pluk een appel uit het voedselbos, geniet van de stilte van de Achterhoek, en slaap in een huis dat net zo goed is voor jou als voor de aarde.</p>
+        <span class="section-label">{{ pagina_natuurhuisje.huisje.label }}</span>
+        <h2 class="section-title">{{ pagina_natuurhuisje.huisje.titel }}</h2>
+        <p class="section-text">{{ pagina_natuurhuisje.huisje.tekst }}</p>
+        {% if pagina_natuurhuisje.huisje.tekst2 %}
+        <p class="section-text" style="margin-top: 16px;">{{ pagina_natuurhuisje.huisje.tekst2 }}</p>
+        {% endif %}
 
         <!-- Fotogalerij -->
         <div class="grid-3 gallery" style="margin-top: 40px;">
+            {% for foto in pagina_natuurhuisje.huisje.fotos %}
             <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/woonkamer-glaswand.jpg" alt="Woonkamer met grote glaswand en uitzicht op het voedselbos">
+                <img loading="lazy" src="{{ foto.src }}" alt="{{ foto.alt }}">
             </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/woonkamer-overzicht.jpg" alt="Eethoek en woonkamer met natuurlijke materialen">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/keuken.jpg" alt="Volledig uitgeruste keuken met vaatwasser en Nespresso">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/uitzicht-bos.jpg" alt="Uitzicht vanuit het huisje op het voedselbos">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/slaapkamer-tweepersoons.jpg" alt="Slaapkamer met tweepersoons bed">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/slaapkamer-bedden.jpg" alt="Slaapkamer met drie losse bedden">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/badkamer-wastafel.jpg" alt="Badkamer met koperen kraan en leemstuc wanden">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/regendouche.jpg" alt="Regendouche met warmteterugwinning">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/acasia/spiegeltje.jpg" alt="Handgemaakt houten spiegeltje">
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -201,11 +181,15 @@ permalink: /natuurhuisje/
 <!-- ==================== OMGEVING ==================== -->
 <section class="section">
     <div class="fade-in">
-        <span class="section-label">omgeving</span>
-        <h2 class="section-title">Midden in het voedselbos</h2>
-        <p class="section-text">Acasia staat midden in het voedselbos van 't Hazelbos: anderhalve hectare met eetbare bomen, struiken en planten. Afhankelijk van het seizoen pluk je appels, peren, bessen, kruiden of noten recht van de tak. In het voorjaar bloeien de fruitbomen, in de zomer geniet je van de weelderige groene omgeving, in de herfst oogst je wat het bos je geeft, en in de winter geniet je van de kale schoonheid en de stilte.</p>
-        <p class="section-text" style="margin-top: 16px;">Het terrein grenst aan het coulissenlandschap van de Achterhoek, een van de rustigste regio's van Nederland. Houtwallen, kronkelende beken en uitgestrekte landbouwgronden bepalen het beeld. Direct vanuit 't Hazelbos kun je wandelen en fietsen door het buitengebied van Zelhem en omgeving. De Slangenburg, het Montferland en de IJssel liggen op korte rijafstand.</p>
-        <p class="section-text" style="margin-top: 16px;">Voor wie verder wil: Doetinchem en Zutphen bieden gezellige binnensteden met terrassen, winkels en cultuur. Maar de meeste gasten komen hier juist om nergens naartoe te hoeven. Gewoon zijn, buiten zitten, de vogels horen en 's avonds de sterren zien. Dat is de Achterhoek op z'n best.</p>
+        <span class="section-label">{{ pagina_natuurhuisje.omgeving.label }}</span>
+        <h2 class="section-title">{{ pagina_natuurhuisje.omgeving.titel }}</h2>
+        <p class="section-text">{{ pagina_natuurhuisje.omgeving.tekst }}</p>
+        {% if pagina_natuurhuisje.omgeving.tekst2 %}
+        <p class="section-text" style="margin-top: 16px;">{{ pagina_natuurhuisje.omgeving.tekst2 }}</p>
+        {% endif %}
+        {% if pagina_natuurhuisje.omgeving.tekst3 %}
+        <p class="section-text" style="margin-top: 16px;">{{ pagina_natuurhuisje.omgeving.tekst3 }}</p>
+        {% endif %}
         <div style="margin-top: 20px;">
             <a href="/voedselbos/#plattegrond" class="read-more">bekijk de plattegrond van het voedselbos &rarr;</a>
         </div>
@@ -221,34 +205,12 @@ permalink: /natuurhuisje/
         <h2 class="section-title">Veelgestelde vragen</h2>
 
         <div class="faq-list">
+            {% for item in pagina_natuurhuisje.faq %}
             <details class="faq-item">
-                <summary>Hoe laat kan ik inchecken en uitchecken?</summary>
-                <p>Inchecken kan vanaf 15:00 uur, uitchecken tot 10:00 uur. In overleg is er soms flexibiliteit mogelijk.</p>
+                <summary>{{ item.vraag }}</summary>
+                <p>{{ item.antwoord }}</p>
             </details>
-            <details class="faq-item">
-                <summary>Zijn huisdieren welkom?</summary>
-                <p>Helaas zijn huisdieren niet welkom in Acasia.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Is er parkeergelegenheid?</summary>
-                <p>Ja, je kunt gratis parkeren op het terrein van 't Hazelbos. Om het terrein autoluw te houden loop je het laatste stukje naar het huisje. Je kunt wel eerst je spullen met de auto bij het huisje afleveren.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Hoe duurzaam is het huisje?</summary>
-                <p>Acasia is gebouwd volgens het passiefhuis-principe met biobased en gerecyclede materialen. Het huisje heeft leemstuc wanden, vloerverwarming via een warmtepomp en een regendouche met warmteterugwinning. Het binnenklimaat is aangenaam in elk seizoen zonder veel energie te verbruiken.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Wat kan ik doen in de omgeving?</summary>
-                <p>Direct vanuit 't Hazelbos kun je wandelen en fietsen door het coulissenlandschap van de Achterhoek. De Slangenburg, het Montferland en de IJssel liggen op korte rijafstand. Doetinchem en Zutphen bieden gezellige binnensteden.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Wat zijn de annuleringsvoorwaarden?</summary>
-                <p>Tot 30 dagen voor aankomst kun je kosteloos annuleren. Tussen 30 en 14 dagen voor aankomst wordt 50% in rekening gebracht, tussen 14 en 7 dagen 75%, en bij annulering minder dan 7 dagen voor aankomst of no-show wordt het volledige bedrag in rekening gebracht.</p>
-            </details>
-            <details class="faq-item">
-                <summary>Hoe werkt betalen?</summary>
-                <p>Bij het boeken betaal je een aanbetaling van 30%. Het resterende bedrag wordt automatisch 30 dagen voor aankomst geïncasseerd. Je kunt betalen via iDEAL of creditcard (Visa, Mastercard).</p>
-            </details>
+            {% endfor %}
         </div>
     </div>
 </section>

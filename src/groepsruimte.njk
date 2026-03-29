@@ -80,9 +80,9 @@ permalink: /groepsruimte/
     <div class="fade-in">
         <div class="hero-split">
             <div class="hero-split-text">
-                <span class="section-label">groepsruimte</span>
-                <h1 class="section-title">Vergaderen en samenkomen</h1>
-                <p class="section-text">Een rustige vergader- en workshopruimte van 60m², midden in het voedselbos van 't Hazelbos. Geschikt voor vergaderingen, brainstormsessies, workshops, cursussen en lezingen. Met flexibele indelingen en alle benodigde faciliteiten voor groepen tot 30 personen.</p>
+                <span class="section-label">{{ pagina_groepsruimte.hero.label }}</span>
+                <h1 class="section-title">{{ pagina_groepsruimte.hero.titel }}</h1>
+                <p class="section-text">{{ pagina_groepsruimte.hero.tekst }}</p>
             </div>
             <div class="hero-split-image">
                 <img src="/images/schetsen/groepsruimte%20schets.png" alt="Potloodschets van de groepsruimte">
@@ -90,15 +90,11 @@ permalink: /groepsruimte/
         </div>
 
         <div class="grid-3 gallery" style="margin-top: 40px;">
+            {% for foto in pagina_groepsruimte.hero.fotos %}
             <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/totaaloverzicht.jpg" alt="Totaaloverzicht van de ruimte">
+                <img loading="lazy" src="{{ foto.src }}" alt="{{ foto.alt }}">
             </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/overzicht-breed.jpg" alt="Ruimte met dakbalken en lichtkoepels">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/eettafel-ruimte.jpg" alt="Eettafel met zicht op de ruimte">
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -108,21 +104,19 @@ permalink: /groepsruimte/
 <!-- ==================== DE RUIMTE ==================== -->
 <section class="section">
     <div class="fade-in">
-        <span class="section-label">de ruimte</span>
-        <h2 class="section-title">Ruimte voor ideeën</h2>
-        <p class="section-text">De groepsruimte is een lichte, open zaal van ongeveer 60m² met hoge dakbalken en lichtkoepels. Flexibel in te delen: van vergaderopstelling tot kringopstelling, van workshop tot lezing. De ruimte beschikt over een keuken, douche en toilet. Koffie en thee zijn inbegrepen.</p>
-        <p class="section-text" style="margin-top: 16px;">Neem tijdens een pauze de tijd om het voedselbos te verkennen. De buitenruimte en de vuurcirkel zijn op aanvraag beschikbaar voor groepsactiviteiten.</p>
+        <span class="section-label">{{ pagina_groepsruimte.ruimte.label }}</span>
+        <h2 class="section-title">{{ pagina_groepsruimte.ruimte.titel }}</h2>
+        <p class="section-text">{{ pagina_groepsruimte.ruimte.tekst }}</p>
+        {% if pagina_groepsruimte.ruimte.tekst2 %}
+        <p class="section-text" style="margin-top: 16px;">{{ pagina_groepsruimte.ruimte.tekst2 }}</p>
+        {% endif %}
 
         <div class="grid-3 gallery" style="margin-top: 40px;">
+            {% for foto in pagina_groepsruimte.ruimte.fotos %}
             <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/cirkelkleed-zithoek.jpg" alt="Cirkelkleed met zithoek en houtkachel">
+                <img loading="lazy" src="{{ foto.src }}" alt="{{ foto.alt }}">
             </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/zithoek-kachel.jpg" alt="Sfeervolle zithoek bij de kachel">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/keuken-uitzicht.jpg" alt="Keuken met uitzicht op het groen">
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -136,30 +130,12 @@ permalink: /groepsruimte/
         <h2 class="section-title">Wat is er aanwezig</h2>
 
         <div class="features-grid" style="margin-top: 30px;">
+            {% for item in pagina_groepsruimte.voorzieningen %}
             <div class="feature-block">
-                <h3>Ruimte</h3>
-                <p>60m², flexibel in te delen, geschikt voor maximaal 30 personen</p>
+                <h3>{{ item.titel }}</h3>
+                <p>{{ item.tekst }}</p>
             </div>
-            <div class="feature-block">
-                <h3>Keuken</h3>
-                <p>Volledig uitgeruste keuken. Koffie en thee inbegrepen</p>
-            </div>
-            <div class="feature-block">
-                <h3>Sanitair</h3>
-                <p>Douche en toilet aanwezig</p>
-            </div>
-            <div class="feature-block">
-                <h3>Parkeren</h3>
-                <p>Parkeerplaatsen beschikbaar op het terrein</p>
-            </div>
-            <div class="feature-block">
-                <h3>Buitenruimte</h3>
-                <p>Voedselbos en vuurcirkel beschikbaar op aanvraag</p>
-            </div>
-            <div class="feature-block">
-                <h3>Omgeving</h3>
-                <p>Midden in het groen, in het buitengebied van Zelhem</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -199,20 +175,16 @@ permalink: /groepsruimte/
 <!-- ==================== SFEER ==================== -->
 <section class="section">
     <div class="fade-in">
-        <span class="section-label">sfeer</span>
-        <h2 class="section-title">Een plek die inspireert</h2>
-        <p class="section-text">De groepsruimte ligt op het erf van 't Hazelbos, verscholen achter de bomen. Geen verkeer, geen kantoorgeluiden, wel vogelzang en de geur van het bos. Dat maakt het verschil. Deelnemers komen tot rust, ideeën krijgen ruimte, gesprekken gaan dieper. We kijken uit naar jouw suggesties en invullingen.</p>
+        <span class="section-label">{{ pagina_groepsruimte.sfeer.label }}</span>
+        <h2 class="section-title">{{ pagina_groepsruimte.sfeer.titel }}</h2>
+        <p class="section-text">{{ pagina_groepsruimte.sfeer.tekst }}</p>
 
         <div class="grid-3 gallery" style="margin-top: 40px;">
+            {% for foto in pagina_groepsruimte.sfeer.fotos %}
             <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/buitenaanzicht.jpg" alt="Buitenaanzicht groepsruimte">
+                <img loading="lazy" src="{{ foto.src }}" alt="{{ foto.alt }}">
             </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/groepsruimte/ruimte-vanuit-keuken.jpg" alt="Ruimte gezien vanuit de keuken">
-            </div>
-            <div class="gallery-item">
-                <img loading="lazy" src="/images/fotos/voedselbos/vuurcirkel-ochtend.jpg" alt="Vuurcirkel bij zonsopkomst">
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -222,9 +194,9 @@ permalink: /groepsruimte/
 <!-- ==================== CONTACT ==================== -->
 <section class="section">
     <div class="fade-in">
-        <span class="section-label">contact</span>
-        <h2 class="section-title">Interesse? Neem contact op</h2>
-        <p class="section-text">Wil je de groepsruimte huren of eerst even komen kijken? Neem gerust contact met ons op. We denken graag mee over de mogelijkheden.</p>
+        <span class="section-label">{{ pagina_groepsruimte.contact.label }}</span>
+        <h2 class="section-title">{{ pagina_groepsruimte.contact.titel }}</h2>
+        <p class="section-text">{{ pagina_groepsruimte.contact.tekst }}</p>
         <div style="margin-top: 20px; text-align: center;">
             <a href="mailto:{{ site.email }}?subject=Groepsruimte%20huren" class="btn btn-filled">Stuur een e-mail</a>
             <a href="tel:{{ site.phone }}" class="read-more" style="margin-left: 20px;">bel ons &rarr;</a>
