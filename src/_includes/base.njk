@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ pageTitle | default(site.title) }}</title>
     <meta name="description" content="{{ pageDescription | default(site.description) }}">
+    <link rel="preload" href="/fonts/sourcesans-400.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/averia-700.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/images/logo%20zwart%20wit%20hazelbos.png">
     {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}

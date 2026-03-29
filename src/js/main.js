@@ -98,7 +98,7 @@ const lightboxNext = document.getElementById('lightboxNext');
 
 // Verzamel alle klikbare foto's op de site
 const allPhotos = [];
-document.querySelectorAll('.gallery-item img, .acasia-hero-photo img, .sketch-image .photo, .gallery .sketch-image .photo').forEach(img => {
+document.querySelectorAll('.gallery-item img, .acasia-hero-photo img').forEach(img => {
     if (!allPhotos.includes(img)) {
         allPhotos.push(img);
     }
@@ -116,18 +116,24 @@ allPhotos.forEach((img, index) => {
     });
 });
 
+let lastFocused = null;
+
 function openLightbox() {
     const img = allPhotos[currentIndex];
     lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
     lightboxCaption.textContent = img.alt || '';
+    lastFocused = document.activeElement;
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
     updateNav();
 }
 
 function closeLightbox() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
 }
 
 function showPrev() {
@@ -163,13 +169,3 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') showNext();
 });
 
-// ===== MOBIEL: TAP VOOR SCHETS→FOTO =====
-// Op mobiel is er geen hover, dus we gebruiken tap
-if ('ontouchstart' in window) {
-    document.querySelectorAll('.sketch-image').forEach(img => {
-        img.addEventListener('click', function() {
-            // Toggle 'revealed' class
-            this.classList.toggle('revealed');
-        });
-    });
-}
