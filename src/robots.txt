@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hazelbos.nl/sitemap.xml

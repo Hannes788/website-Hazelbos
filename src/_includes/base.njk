@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle | default(site.title) }}</title>
+    <meta name="description" content="{{ pageDescription | default(site.description) }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/logo%20zwart%20wit%20hazelbos.png">
+    {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
+    {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+
+    <!-- Open Graph -->
+    {% if og %}
+    <meta property="og:title" content="{{ og.title }}">
+    <meta property="og:description" content="{{ og.description }}">
+    <meta property="og:image" content="{{ og.image }}">
+    <meta property="og:url" content="{{ og.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta name="twitter:card" content="summary_large_image">
+    {% endif %}
+
+    <!-- Structured Data -->
+    {% if structuredData %}
+    <script type="application/ld+json">
+    {{ structuredData | safe }}
+    </script>
+    {% endif %}
+</head>
+<body>
+
+    {% include "nav.njk" %}
+
+    <div class="page-content" {% if isHomepage %}id="top"{% endif %}>
+        {{ content | safe }}
+    </div>
+
+    {% include "footer.njk" %}
+
+    {% include "lightbox.njk" %}
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

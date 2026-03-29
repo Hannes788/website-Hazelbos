@@ -1,0 +1,21 @@
+{
+    "title": "'t Hazelbos — Voedselbos, Huisjes & Gemeenschapsruimte",
+    "description": "'t Hazelbos — Ontdek ons voedselbos, verblijf in sfeervolle huisjes en huur onze gemeenschapsruimte.",
+    "url": "https://hazelbos.nl",
+    "tagline": "Een plek waar natuur, rust en gemeenschap samenkomen.",
+    "email": "info@hazelbos.nl",
+    "phone": "+31623502163",
+    "phoneDisplay": "06 23 50 21 63",
+    "instagram": "https://instagram.com/hazelbos",
+    "address": {
+        "street": "Akkermansstraat 8",
+        "postalCode": "7021 LW",
+        "city": "Zelhem",
+        "region": "Gelderland",
+        "country": "NL"
+    },
+    "geo": {
+        "latitude": 52.0058,
+        "longitude": 6.3475
+    }
+}

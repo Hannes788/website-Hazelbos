@@ -1,0 +1,89 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "nieuws"
+    label: "Nieuws"
+    folder: "src/nieuws"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Samenvatting", name: "summary", widget: "text", hint: "Korte samenvatting die zichtbaar is als het bericht is ingeklapt." }
+      - { label: "Afbeelding", name: "image", widget: "image", required: false }
+      - { label: "Alt-tekst afbeelding", name: "imageAlt", widget: "string", required: false }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+
+  - name: "agenda"
+    label: "Agenda"
+    folder: "src/agenda"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Samenvatting", name: "summary", widget: "text" }
+      - { label: "Inhoud", name: "body", widget: "markdown", required: false }
+
+  - name: "instellingen"
+    label: "Instellingen"
+    files:
+      - label: "Site-informatie"
+        name: "site"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschrijving", name: "description", widget: "text" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "E-mail", name: "email", widget: "string" }
+          - { label: "Telefoon (internationaal)", name: "phone", widget: "string" }
+          - { label: "Telefoon (weergave)", name: "phoneDisplay", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - label: "Adres"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Straat", name: "street", widget: "string" }
+              - { label: "Postcode", name: "postalCode", widget: "string" }
+              - { label: "Plaats", name: "city", widget: "string" }
+              - { label: "Provincie", name: "region", widget: "string" }
+              - { label: "Land", name: "country", widget: "string" }
+          - label: "Coördinaten"
+            name: "geo"
+            widget: "object"
+            fields:
+              - { label: "Breedtegraad", name: "latitude", widget: "number", value_type: "float" }
+              - { label: "Lengtegraad", name: "longitude", widget: "number", value_type: "float" }
+
+      - label: "Team"
+        name: "team"
+        file: "src/_data/team.json"
+        fields:
+          - { label: "Introductie", name: "intro", widget: "text" }
+          - { label: "Introductie (vervolg)", name: "intro2", widget: "text" }
+          - label: "Teamleden"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Naam", name: "name", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+              - { label: "Afbeelding", name: "image", widget: "image" }
+
+      - label: "Groepsruimte prijzen"
+        name: "groepsruimte_prijzen"
+        file: "src/_data/groepsruimte_prijzen.json"
+        fields:
+          - label: "Tarieven"
+            name: "tarieven"
+            widget: "list"
+            fields:
+              - { label: "Optie", name: "optie", widget: "string" }
+              - { label: "Tijden", name: "tijden", widget: "string" }
+              - { label: "Prijs", name: "prijs", widget: "string" }
+          - { label: "Opmerking", name: "opmerking", widget: "text" }
