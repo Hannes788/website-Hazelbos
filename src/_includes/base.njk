@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="/images/logo%20zwart%20wit%20hazelbos.png">
     {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
     {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <!-- Open Graph -->
     {% if og %}
@@ -41,5 +42,16 @@
     {% include "lightbox.njk" %}
 
     <script src="/js/main.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 </html>
