@@ -85,11 +85,12 @@ structuredData: >
             {% endfor %}
         </ul>
 
-        <!-- Boekingsmodule (tijdelijk uitgeschakeld) -->
-        <div style="margin-top: 50px; text-align: center; padding: 40px 20px; background: rgba(0,0,0,0.03); border-radius: 8px;">
-            <p class="section-text"><strong>Online boeken is binnenkort mogelijk.</strong></p>
-            <p class="section-text" style="margin-top: 8px;">Neem gerust contact met ons op voor beschikbaarheid en reserveringen.</p>
-            <a href="mailto:info@hazelbos.nl?subject=Boekingsaanvraag%20Acasia" class="btn btn-filled" style="margin-top: 16px;">Stuur een e-mail</a>
+        <!-- Boekingsmodule Smoobu -->
+        <div class="booking-widget" style="margin-top: 50px;">
+            <div id="apartmentIframeHome">
+                <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+                <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/en/booking-tool/iframe/1685922", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeHome"})</script>
+            </div>
         </div>
 
         <a href="/natuurhuisje/" class="btn" style="margin-top: 30px;">Meer over Acasia</a>
