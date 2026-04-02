@@ -379,34 +379,6 @@ body {
     margin-top: 36px;
 }
 
-/* ===== HUISJE CARD ===== */
-.huisje-card {
-    text-align: center;
-}
-
-.huisje-card .sketch-image {
-    margin-bottom: 20px;
-    aspect-ratio: 4 / 3;
-}
-
-.huisje-card .sketch-image .photo {
-    height: 100%;
-    object-fit: cover;
-}
-
-.huisje-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-ink);
-    margin-bottom: 6px;
-}
-
-.huisje-card .meta {
-    font-size: 0.8rem;
-    color: var(--color-ink-faint);
-    font-weight: 300;
-}
 
 /* ===== FEATURE LIST ===== */
 .feature-list {
